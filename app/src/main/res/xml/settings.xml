@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/settings_general">
+        <EditTextPreference
+            android:key="userName"
+            android:title="@string/settings_userName"
+            android:dialogTitle="@string/settings_userNameSet" />
+
+        <EditTextPreference
+            android:key="userEmail"
+            android:title="@string/settings_userEmail"
+            android:dialogTitle="@string/settings_userEmailSet" />
+
+        <CheckBoxPreference
+            android:key="firstStart"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_notifications">
+        <SwitchPreference
+            android:key="notificationsSwitch"
+            android:title="@string/settings_notificationsSwitch"
+            android:defaultValue="true"/>
+
+        <CheckBoxPreference
+            android:key="persistentNotification"
+            android:defaultValue="false"
+            android:title="@string/settings_persistentNotification"
+            android:summary="@string/settings_summary_persistentNotification"/>
+
+        <CheckBoxPreference
+            android:key="apticFeedback"
+            android:title="@string/settings_vibrationTick"
+            android:summary="@string/settings_summary_vibrationTick"
+            android:defaultValue="false"/>
+
+        <ListPreference
+            android:key="notificationsTime"
+            android:title="@string/settings_notificationsTime"
+            android:summary="@string/settings_summary_notificationsTime"
+            android:entries="@array/notificationTimes"
+            android:entryValues="@array/notificationTimesCoded"
+            android:dialogTitle="@string/settings_summary_notificationsTime"
+            android:defaultValue="0"/>
+
+    </PreferenceCategory>
+    <!-- TODO: Add about section. -->
+
+</PreferenceScreen>

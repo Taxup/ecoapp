@@ -1,0 +1,161 @@
+<resources>
+    <string name="app_name">Eco App</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_settings">Settings</string>
+
+    <string name="main_day">day</string>
+    <string name="main_of">of</string>
+
+    <string name="notifications_title">Let\’s help your planet!</string>
+    <string name="notifications_subtitle">Your effort is important, don\'t underestimate it</string>
+
+    <string name="advice_view_share_description">Share this advice</string>
+    <string name="advice_view_share_body">Let me recommend you this application: \nhttps://play.google.com/store/apps/details?id=gq.emiliodallatorre.oneaday.app\nthis is an app to help you reduce your carbon footprint.</string>
+    <string name="advice_view_share_select">Choose how to share this app:</string>
+
+    <string name="press_exit">Click back again to exit</string>
+
+    <!-- Here are the strings for the settings dialogs. -->
+    <string name="settings_general">General</string>
+    <string name="settings_notifications">Notifications</string>
+    <string name="settings_notificationsSwitch">Enable daily notifications</string>
+    <string name="settings_persistentNotification">Persistent notifications</string>
+    <string name="settings_vibrationTick">Enable aptic feedback</string>
+    <string name="settings_notificationsTime">Notification time</string>
+    <string name="settings_about">About</string>
+    <string name="settings_userName">Your name</string>
+    <string name="settings_userNameSet">Set here your name</string>
+    <string name="settings_userEmail">Your email</string>
+    <string name="settings_userEmailSet">Set here your email</string>
+    <string name="settings_startDay">Starting day</string>
+    <string name="settings_startDaySet">Select the day of month you started using this app</string>
+
+    <string name="settings_summary_vibrationTick">Uncheck to disable vibration</string>
+    <string name="settings_summary_notificationsTime">Select time for notification</string>
+    <string name="settings_summary_persistentNotification">Make the notification persistent during the day</string>
+
+
+
+    <string-array name="notificationTimes">
+        <item>Morning</item>
+        <item>Noon</item>
+        <item>Evening</item>
+    </string-array>
+
+    <string-array name="notificationTimesCoded">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="advicesTitle">
+        <item>Close the water when you don\'t need it (for example when you wash your teeth)</item>
+        <item>Don\'t leave the stand-by mode on in your electronic devices</item>
+        <item>Use the same plastic or glass bottle you used yesterday</item>
+        <item>Don\'t throw away your waste on the pavement (for example cigarettes if you smoke)</item>
+        <item>Eat biological products</item>
+        <item>Use air conditioning or heating only if necessary</item>
+        <item>Separate your waste into plastic, organic, glass, paper, non-recyclable waste</item>
+        <item>Buy a reusable bag for your shopping</item>
+        <item>Use your remaining water to water the plants</item>
+        <item>Use bike or public transport for your movements</item>
+        <item>Reuse packages (for example perfumes, shoes and soap boxes)</item>
+        <item>Take a cold shower instead of a hot one</item>
+        <item>Buy something made of recyclable material</item>
+        <item>Wherever you go, pick up the litter which is not in the bin</item>
+        <item>Buy food from local sellers (for example: meat or groceries)</item>
+        <item>Support the green areas of your town by using them</item>
+        <item>Get informed about a green association</item>
+        <item>Watch a documentary about environmental topics</item>
+        <item>Make a marmalade from the fruit you don\'t eat</item>
+        <item>Don\'t use disposable stuff</item>
+        <item>Try to understand how big your carbon footprint is</item>
+        <item>Try not to use elevators or escalators today</item>
+        <item>Don\'t underestimate the power of your bottle tops</item>
+        <item>Choose one of the previous missions and redo it with one of your friends</item>
+        <item>Invent your own green mission and, if you want, let us know</item>
+        <item>Buy the seeds of your favourite tree</item>
+        <item>Your world is beautiful: just relax and admire it</item>
+        <item>Plant the seeds you\'ve bought (obviously, if you don\'t have a garden, you should go to a park)</item>
+    </string-array>
+
+    <string-array name="advicesSubtitle">
+        <item>Half of the water we use goes to waste due to evaporation caused by over-watering</item>
+        <item>Phantom load is 10% of the energy use in US</item>
+        <item>In 2015, every inhabitant of EU generated 166.3kg of plastic waste</item>
+        <item>Plastic takes 450 years or more to decompose</item>
+        <item>In EU, 500kg of fertilizers are used for every hectare of arable land</item>
+        <item>Older air conditioners can consume up to 800%% electricity of the new air conditioners</item>
+        <item>On a single run of the Sunday New York Times not recycled, 75.000 trees are wasted</item>
+        <item>https://earth911.com/living-well-being/repurpose-food-packaging/</item>
+        <item>The outflow of water in the UK is 171 billions mc per year</item>
+        <item>On-road vehicles cause one-third of air pollution that produces smog in US</item>
+        <item>Half of the water we use goes to waste due to evaporation caused by over-watering</item>
+        <item>Cold water causes your blood to circulate at faster rates to mantain ideal body temperature</item>
+        <item>Using recycled materials in a construction can reduce it\'s environmental impact of 45%</item>
+        <item>Billions of tons of litter are dumped into the ocean each year and besides the 250 million trashes that is being generated each year too</item>
+        <item>Locally grown food reduces the present average of 1300 miles food travels from "field to plate"</item>
+        <item>The Earth has lost more than half of it\'s trees since humans first learn how to weald the axe</item>
+        <item>https://en.wikipedia.org/wiki/List_of_environmental_organizations</item>
+        <item><a href="https://www.bbc.co.uk/programs/b006mywy">Here</a>\'s an example</item>
+        <item><a href="https://www.wikihow.com/Make-Jam">Here</a>\'s a simple guide</item>
+        <item>Half of the water we use goes to waste due to evaporation caused by over-watering</item>
+        <item>In the UK, 7 million disposable coffee cups are used every day</item>
+        <item><a href="https://www.carboonfootprint.com">Here</a>\'s a website to calculate your actual carbonm footprint</item>
+        <item>There are several benefits of using the stairs: it\'s free workout and it\'s an energy saver</item>
+        <item>In France, 485 million of bottle tops have been used to build an orphanage in Madagascar</item>
+        <item>Half of the water we use goes to waste due to evaporation caused by over-watering</item>
+        <item>Half of the water we use goes to waste due to evaporation caused by over-watering</item>
+        <item>Half of the water we use goes to waste due to evaporation caused by over-watering</item>
+        <item>https://youtu.be/pLCSTn6_uU0</item>
+        <item>https://www.treesaregood.org/treeowner/plantingatree</item>
+    </string-array>
+
+    <string-array name="advicesBody">
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum luctus diam id dictum. Vivamus ac velit augue. Integer pretium sodales sapien, nec iaculis ex pellentesque sed. Phasellus velit ante, pellentesque ut aliquam blandit, fringilla vel tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse vulputate libero vitae ante rhoncus, eu rhoncus risus consectetur. Integer at ex pellentesque, scelerisque erat quis, sagittis risus. Aliquam facilisis auctor massa vitae tincidunt. Donec ac convallis turpis, ut vehicula nunc. Nunc a eleifend arcu. Praesent porta nibh tortor, id mollis mi tempus quis. Donec vulputate sapien nec nibh viverra, sed blandit purus eleifend. Nunc ut odio magna. Aliquam condimentum ligula non neque dictum, sed commodo odio ullamcorper. Integer vehicula arcu eget ipsum feugiat ultrices. Integer scelerisque sed ligula in molestie. Quisque facilisis fermentum arcu, ac interdum dui aliquet id. Fusce vitae justo id dolor pharetra malesuada. Fusce blandit malesuada odio vitae aliquet. Aliquam luctus congue erat, eget dictum lacus rutrum sit amet. Donec vitae tincidunt elit. Mauris tempor nisl libero, lacinia aliquam elit aliquam id. Proin posuere interdum libero quis gravida. Nulla dapibus quam sed risus porta, non luctus dolor consectetur. Fusce vestibulum mattis ligula in luctus. Maecenas lectus lectus, condimentum vel enim ultricies, dignissim tristique arcu. Donec ultricies lacinia justo non malesuada. Aenean finibus ex eu nisl tincidunt egestas. Nunc purus urna, porttitor eget molestie quis, convallis a ipsum. Etiam nisl enim, vestibulum in ipsum nec, accumsan dignissim turpis. Sed vel felis lacus.</item>
+        <item>Don\'t leave the stand-by mode on in your electronic devices</item>
+        <item>Use the same plastic or glass bottle you used yesterday</item>
+        <item>Don\'t throw away your waste on the pavement (for example cigarettes if you smoke)</item>
+        <item>Eat biological products</item>
+        <item>Use air conditioning or heating only if necessary</item>
+        <item>Separate your waste into plastic, organic, glass, paper, non-recyclable waste</item>
+        <item>Buy a reusable bag for your shopping</item>
+        <item>Use your remaining water to water the plants</item>
+        <item>Use bike or public transport for your movements</item>
+        <item>Reuse packages (for example perfumes, shoes and soap boxes)</item>
+        <item>Take a cold shower instead of a hot one</item>
+        <item>Buy something made of recyclable material</item>
+        <item>Wherever you go, pick up the litter which is not in the bin</item>
+        <item>Buy food from local sellers (for example: meat or groceries)</item>
+        <item>Support the green areas of your town by using them</item>
+        <item>Get informed about a green association</item>
+        <item>Watch a documentary about environmental topics</item>
+        <item>Make a marmalade from the fruit you don\'t eat</item>
+        <item>Don\'t use disposable stuff</item>
+        <item>Try to understand how big your carbon footprint is</item>
+        <item>Try not to use elevators or escalators today</item>
+        <item>Don\'t underestimate the power of your bottle tops</item>
+        <item>Choose one of the previous missions and redo it with one of your friends</item>
+        <item>Invent your own green mission and, if you want, let us know</item>
+        <item>Buy the seeds of your favourite tree</item>
+        <item>Your world is beautiful: just relax and admire it</item>
+        <item>Plant the seeds you\'ve bought (obviously, if you don\'t have a garden, you should go to a park)</item>
+    </string-array>
+
+    <string-array name="months">
+        <item>jan</item>
+        <item>feb</item>
+        <item>mar</item>
+        <item>apr</item>
+        <item>may</item>
+        <item>jun</item>
+        <item>jul</item>
+        <item>aug</item>
+        <item>sept</item>
+        <item>oct</item>
+        <item>nov</item>
+        <item>dec</item>
+    </string-array>
+</resources>
