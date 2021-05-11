@@ -6,7 +6,7 @@
     <color name="textColorPrimary">#000</color>
     <color name="textColorSecondary">#FFFFFF</color>
     <color name="textColorLight">#444</color>
-    <color name="colorBackground">#BACDB0</color>
+    <color name="colorBackground">#FFFFFF</color>
     <color name="ic_launcher_background">#fafafa</color>
 
     <color name="purple_200">#FFBB86FC</color>

@@ -15,7 +15,44 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+
+        <receiver
+            android:process=":remote"
+            android:name=".notifications.NotificationReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="gq.emiliodallatorre.oneaday.app.android.action.notify" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".notifications.BootReceiver"
+            android:process=":remote"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.dashboard.advice.AdviceView"
+            android:label="@string/title_activity_advice_view"
+            android:theme="@style/Theme.EcoApp">
+
+        </activity>
+        <activity
+            android:name=".ui.settings.SettingsShortcut"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.EcoApp">
+
         </activity>
     </application>
+
 
 </manifest>

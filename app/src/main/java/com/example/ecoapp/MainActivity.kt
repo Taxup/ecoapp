@@ -19,7 +19,7 @@ import com.example.ecoapp.ui.settings.SettingsFragment
 import com.example.ecoapp.ui.news.NewsFragment
 import java.util.*
 
-class MainActivity : AppCompatActivity(), MainFragment.OnFragmentInteractionListener, DashboardFragment.OnFragmentInteractionListener {
+class MainActivity : AppCompatActivity(), DashboardFragment.OnFragmentInteractionListener {
     private val fragmentManager = supportFragmentManager
 
     private val mainFragment = MainFragment()

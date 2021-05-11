@@ -2,6 +2,7 @@
     <string name="app_name">Eco App</string>
 
     <string name="title_home">Home</string>
+    <string name="title_news">News</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_settings">Settings</string>
 
@@ -12,7 +13,7 @@
     <string name="notifications_subtitle">Your effort is important, don\'t underestimate it</string>
 
     <string name="advice_view_share_description">Share this advice</string>
-    <string name="advice_view_share_body">Let me recommend you this application: \nhttps://play.google.com/store/apps/details?id=gq.emiliodallatorre.oneaday.app\nthis is an app to help you reduce your carbon footprint.</string>
+    <string name="advice_view_share_body">Let me recommend you this application: this is an app to help you reduce your carbon footprint.</string>
     <string name="advice_view_share_select">Choose how to share this app:</string>
 
     <string name="press_exit">Click back again to exit</string>
@@ -158,4 +159,14 @@
         <item>nov</item>
         <item>dec</item>
     </string-array>
+
+    <string name="title_activity_advice_view">AdviceView</string>
+
+    <!-- Here are the strings of the shortcuts in the launcher. -->
+    <string name="launcher_shortcuts_disabled">This shortcut is disabled</string>
+    <string name="launcher_shortcuts_todayAdvice">Daily advice</string>
+    <string name="launcher_shortcuts_todayAdviceLong">See what you can do today</string>
+
+    <string name="launcher_shortcuts_settings">Settings</string>
+    <string name="launcher_shortcuts_settingsLong">Edit One a Day settings</string>
 </resources>

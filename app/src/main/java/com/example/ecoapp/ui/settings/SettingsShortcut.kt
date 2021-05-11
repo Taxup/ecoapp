@@ -23,7 +23,7 @@ class SettingsShortcut: AppCompatActivity() {
         val flp = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT)
 
         settingsFragment.layoutParams = flp
-        settingsFragment.tag =
+//        settingsFragment.tag =
 
         relativeLayout.addView(settingsFragment)
         settingsFragment.id = R.id.fragment

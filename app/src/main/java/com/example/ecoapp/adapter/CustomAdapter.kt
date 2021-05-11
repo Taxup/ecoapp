@@ -16,7 +16,10 @@ import com.example.ecoapp.ui.dashboard.advice.AdviceView
 import com.example.ecoapp.model.Advice
 import java.util.*
 
-class CustomAdapter internal constructor(private val context: Context, private val adviceList: ArrayList<Advice>) : BaseAdapter() {
+class CustomAdapter internal constructor(
+    private val context: Context,
+    private val adviceList: ArrayList<Advice>
+) : BaseAdapter() {
 
     private val inflater = LayoutInflater.from(context)
 

@@ -21,24 +21,38 @@ class NotificationReceiver : BroadcastReceiver() {
         // This method is called when the BroadcastReceiver is receiving an Intent broadcast.
         createNotificationChannel(context)
 
-        val mBuilder = NotificationCompat.Builder(context, "oneADay-notifications")
-                .setSmallIcon(R.drawable.ic_notification)
-                .setColor(ResourcesCompat.getColor(context.resources, R.color.colorPrimaryDark, null))
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                .setContentIntent(
-                        PendingIntent.getActivity(context,
-                                0,
-                                Intent(context,
-                                        MainActivity::class.java).apply {flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK},
-                                0))
+        val mBuilder = NotificationCompat.Builder(context, "ecoApp-notifications")
+            .setSmallIcon(R.drawable.ic_notification)
+            .setColor(ResourcesCompat.getColor(context.resources, R.color.colorPrimaryDark, null))
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .setContentIntent(
+                PendingIntent.getActivity(
+                    context,
+                    0,
+                    Intent(
+                        context,
+                        MainActivity::class.java
+                    ).apply {
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    },
+                    0
+                )
+            )
 
-        if (PreferenceManager.getDefaultSharedPreferences(context).getBoolean("persistentNotification", false)) {
-            val dayOfPath: Int = Calendar.getInstance().get(Calendar.DAY_OF_MONTH) - PreferenceManager.getDefaultSharedPreferences(context).getInt("startDay", 1)
+        if (PreferenceManager.getDefaultSharedPreferences(context)
+                .getBoolean("persistentNotification", false)
+        ) {
+            val dayOfPath: Int = Calendar.getInstance()
+                .get(Calendar.DAY_OF_MONTH) - PreferenceManager.getDefaultSharedPreferences(context)
+                .getInt("startDay", 1)
 
             mBuilder.setContentText(context.resources.getStringArray(R.array.advicesSubtitle)[dayOfPath])
-                    .setContentTitle(context.resources.getStringArray(R.array.advicesTitle)[dayOfPath])
-                    .setStyle(NotificationCompat.BigTextStyle().bigText(context.resources.getStringArray(R.array.advicesBody)[dayOfPath]))
-                    .setOngoing(true)
+                .setContentTitle(context.resources.getStringArray(R.array.advicesTitle)[dayOfPath])
+                .setStyle(
+                    NotificationCompat.BigTextStyle()
+                        .bigText(context.resources.getStringArray(R.array.advicesBody)[dayOfPath])
+                )
+                .setOngoing(true)
         } else {
             mBuilder.setAutoCancel(true)
             mBuilder.setContentTitle(context.getString(R.string.notifications_title))
@@ -54,15 +68,21 @@ class NotificationReceiver : BroadcastReceiver() {
         // Create the NotificationChannel, but only on API 26+ because
         // the NotificationChannel class is new and not in the support library
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val name = "One a Day"
-            val description = "Channel for notification from \"One a Day\" app."
+            val name = "Eco App"
+            val description = "Channel for notification from \"Eco\" app."
             val importance = NotificationManager.IMPORTANCE_DEFAULT
-            val channel = NotificationChannel("oneADay-notifications", name, importance)
-            channel.enableVibration(PreferenceManager.getDefaultSharedPreferences(context).getBoolean("apticFeedback", false))
+            val channel = NotificationChannel("ecoApp-notifications", name, importance)
+            channel.enableVibration(
+                PreferenceManager.getDefaultSharedPreferences(context)
+                    .getBoolean("apticFeedback", false)
+            )
             channel.description = description
             // Register the channel with the system; you can't change the importance
             // or other notification behaviors after this
-            val notificationManager = ContextCompat.getSystemService<NotificationManager>(context, NotificationManager::class.java)
+            val notificationManager = ContextCompat.getSystemService<NotificationManager>(
+                context,
+                NotificationManager::class.java
+            )
             notificationManager!!.createNotificationChannel(channel)
         }
     }
