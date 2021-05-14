@@ -1,46 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/purple_700"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    android:background="@color/purple_700">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/news_info_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="horizontal">
+            
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/news_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:text="Title"
+                    android:textSize="22sp" />
+
+
+                <TextView
+                    android:id="@+id/news_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:text="Description"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/news_image"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_launcher_background" />
+
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/news_title"
-            android:layout_width="match_parent"
+            android:id="@+id/news_date"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxLines="2"
-            android:text="news title"
-            android:textSize="22sp" />
-
-        <ImageView
-            android:id="@+id/news_image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher_foreground" />
-
-        <TextView
-            android:id="@+id/news_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="5"
-            android:text="News Description short"
-            android:textSize="16sp" />
+            android:text="10 january"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/news_info_container" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="click for more info.."
-            android:textColor="@color/purple_200"
+            android:layout_gravity="end"
             android:background="@android:color/transparent"
-            android:layout_gravity="end
-"/>
+            android:text="more..."
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/news_info_container" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

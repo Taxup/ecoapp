@@ -17,8 +17,10 @@ import com.example.ecoapp.notifications.NotificationReceiver
 import com.example.ecoapp.ui.main.MainFragment
 import com.example.ecoapp.ui.settings.SettingsFragment
 import com.example.ecoapp.ui.news.NewsFragment
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity(), DashboardFragment.OnFragmentInteractionListener {
     private val fragmentManager = supportFragmentManager
 

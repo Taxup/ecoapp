@@ -9,11 +9,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ListView
 import androidx.fragment.app.Fragment
-import com.example.ecoapp.model.Advice
+import com.example.ecoapp.domain.model.Advice
 import com.example.ecoapp.R
 import com.example.ecoapp.adapter.CustomAdapter
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_dashboard.*
 import java.util.*
 
+@AndroidEntryPoint
 class DashboardFragment : Fragment() {
     private var listener: OnFragmentInteractionListener? = null
     private var adviceList = ArrayList<Advice>()
@@ -54,13 +57,13 @@ class DashboardFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        (context as Activity).findViewById<ListView>(R.id.progressList).adapter =
-            CustomAdapter(context as Activity, adviceList)
+        progressList.adapter =
+            CustomAdapter(requireContext(), adviceList)
     }
 
     override fun onResume() {
         super.onResume()
-        val listView: ListView = (context as Activity).findViewById(R.id.progressList)
+        val listView: ListView = progressList
         object : Thread() {
             override fun run() {
                 try {

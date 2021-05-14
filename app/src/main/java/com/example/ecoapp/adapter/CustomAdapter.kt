@@ -13,7 +13,8 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.ecoapp.R
 import com.example.ecoapp.ui.dashboard.advice.AdviceView
-import com.example.ecoapp.model.Advice
+import com.example.ecoapp.domain.model.Advice
+import com.example.ecoapp.util.TAG
 import java.util.*
 
 class CustomAdapter internal constructor(
@@ -72,7 +73,7 @@ class CustomAdapter internal constructor(
         }
 
         // Log advices for debugging scopes.
-        Log.d((context as Activity).localClassName, advice.title + " $i ++++++++")
+        Log.d(TAG, advice.title + " $i ++++++++")
 
         return retView
     }

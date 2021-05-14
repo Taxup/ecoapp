@@ -1,4 +1,4 @@
-package com.example.ecoapp.model
+package com.example.ecoapp.domain.model
 
 class Advice {
     var title: String? = null

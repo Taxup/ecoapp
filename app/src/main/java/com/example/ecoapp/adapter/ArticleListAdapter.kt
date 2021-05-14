@@ -10,13 +10,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.ecoapp.R
-import com.example.ecoapp.model.NewsItem
+import com.example.ecoapp.domain.model.Article
 import com.example.ecoapp.util.TAG
+import java.time.LocalDate
 
-class NewsItemAdapter(
+class ArticleListAdapter(
     private val context: Context,
-    private val newsList: List<NewsItem>
-) : RecyclerView.Adapter<NewsItemAdapter.ViewHolder>() {
+    private var newsList: List<Article>
+) : RecyclerView.Adapter<ArticleListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         Log.d(TAG, "onBindViewHolder: ")
@@ -29,23 +30,32 @@ class NewsItemAdapter(
 
         Log.d(TAG, "onBindViewHolder: $position")
         holder.titleView.text = currentItem.title
-//        todo set image
         Glide
             .with(context)
-            .load(currentItem.imageUrl)
+            .load(currentItem.urlToImage)
             .centerCrop()
             .placeholder(R.drawable.ic_launcher_foreground)
             .into(holder.imageView)
         holder.descriptionView.text = currentItem.description
+//        holder.dateView.text = LocalDate.parse(currentItem.publishedAt).format()
     }
 
     override fun getItemCount(): Int {
         return newsList.size
     }
 
+    fun setArticles(articles: List<Article>?) {
+        articles?.let{
+            newsList = it
+        }
+        notifyDataSetChanged()
+    }
+
+
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var titleView: TextView = itemView.findViewById(R.id.news_title)
         var imageView: ImageView = itemView.findViewById(R.id.news_image)
         var descriptionView: TextView = itemView.findViewById(R.id.news_description)
+        var dateView: TextView = itemView.findViewById(R.id.news_date)
     }
 }

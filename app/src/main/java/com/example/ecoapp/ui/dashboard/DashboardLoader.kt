@@ -3,7 +3,7 @@ package com.example.ecoapp.ui.dashboard
 import android.content.Context
 import androidx.preference.PreferenceManager
 import com.example.ecoapp.R
-import com.example.ecoapp.model.Advice
+import com.example.ecoapp.domain.model.Advice
 import java.util.*
 
 class DashboardLoader {

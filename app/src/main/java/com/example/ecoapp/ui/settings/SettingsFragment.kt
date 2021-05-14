@@ -13,8 +13,10 @@ import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
 import com.example.ecoapp.R
 import com.example.ecoapp.notifications.NotificationReceiver
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 
+@AndroidEntryPoint
 class SettingsFragment : PreferenceFragmentCompat(),
     SharedPreferences.OnSharedPreferenceChangeListener {
     // Save an instance of PreferenceManager, universal for this class.
