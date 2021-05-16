@@ -1,4 +1,4 @@
-package com.example.ecoapp.ui.news
+package com.example.ecoapp.ui.news.article_list
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -17,10 +17,10 @@ class NewsViewModel
 ): ViewModel() {
 
     val articles: MutableLiveData<List<Article>> = MutableLiveData(ArrayList())
-    val query = MutableLiveData("usa")
+    val query = MutableLiveData("")
 
     init {
-        newSearch("usa")
+        newSearch("ecology")
     }
 
     fun newSearch(query: String = "") {
@@ -33,5 +33,11 @@ class NewsViewModel
 
     fun onQueryChanged(query: String) {
         this.query.value = query
+    }
+
+    fun addArticle(article: Article) {
+        val list = articles.value?.toMutableList()
+        list?.add(0, article)
+        articles.postValue(list)
     }
 }

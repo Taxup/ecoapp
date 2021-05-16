@@ -6,5 +6,4 @@ interface ArticleRepository {
 
     suspend fun search(query: String, apiKey: String) : List<Article>
 
-
 }

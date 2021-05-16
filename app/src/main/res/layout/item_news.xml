@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:background="@color/purple_700">
+    android:layout_margin="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,14 +16,14 @@
             android:id="@+id/news_info_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="2"
+            android:weightSum="100"
             app:layout_constraintTop_toTopOf="parent"
             android:orientation="horizontal">
-            
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="55"
                 android:orientation="vertical">
 
                 <TextView
@@ -31,8 +31,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="2"
-                    android:text="Title"
-                    android:textSize="22sp" />
+                    android:ellipsize="end"
+                    android:text="@string/title"
+                    android:textSize="22sp"/>
 
 
                 <TextView
@@ -40,17 +41,25 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="4"
-                    android:text="Description"
+                    android:ellipsize="end"
+                    android:text="@string/description"
                     android:textSize="16sp"/>
 
             </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="5"/>
 
             <ImageView
                 android:id="@+id/news_image"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/ic_launcher_background" />
+                android:layout_weight="40"
+                android:paddingVertical="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"/>
 
         </LinearLayout>
 
@@ -61,19 +70,20 @@
             android:text="10 january"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/news_info_container" />
+            app:layout_constraintTop_toBottomOf="@id/news_info_container"/>
 
         <Button
+            android:id="@+id/news_more_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:background="@android:color/transparent"
-            android:text="more..."
+            android:text="@string/more"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/news_info_container" />
+            app:layout_constraintTop_toBottomOf="@id/news_info_container"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

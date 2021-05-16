@@ -16,7 +16,7 @@ import com.example.ecoapp.ui.dashboard.DashboardFragment
 import com.example.ecoapp.notifications.NotificationReceiver
 import com.example.ecoapp.ui.main.MainFragment
 import com.example.ecoapp.ui.settings.SettingsFragment
-import com.example.ecoapp.ui.news.NewsFragment
+import com.example.ecoapp.ui.news.article_list.NewsFragment
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 

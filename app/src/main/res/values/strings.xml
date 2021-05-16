@@ -169,4 +169,7 @@
 
     <string name="launcher_shortcuts_settings">Settings</string>
     <string name="launcher_shortcuts_settingsLong">Edit One a Day settings</string>
+    <string name="description">Description</string>
+    <string name="title">Title</string>
+    <string name="more">more...</string>
 </resources>

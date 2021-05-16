@@ -12,7 +12,6 @@ import com.bumptech.glide.Glide
 import com.example.ecoapp.R
 import com.example.ecoapp.domain.model.Article
 import com.example.ecoapp.util.TAG
-import java.time.LocalDate
 
 class ArticleListAdapter(
     private val context: Context,
@@ -30,14 +29,23 @@ class ArticleListAdapter(
 
         Log.d(TAG, "onBindViewHolder: $position")
         holder.titleView.text = currentItem.title
-        Glide
-            .with(context)
-            .load(currentItem.urlToImage)
-            .centerCrop()
-            .placeholder(R.drawable.ic_launcher_foreground)
-            .into(holder.imageView)
+        currentItem.imageDrawable?.let {
+            Glide
+                .with(context)
+                .load(it)
+                .placeholder(R.drawable.ic_launcher_foreground)
+                .into(holder.imageView)
+        }
+        currentItem.urlToImage?.let {
+            Glide
+                .with(context)
+                .load(it)
+                .placeholder(R.drawable.ic_launcher_foreground)
+                .into(holder.imageView)
+        }
+
         holder.descriptionView.text = currentItem.description
-//        holder.dateView.text = LocalDate.parse(currentItem.publishedAt).format()
+        holder.dateView.text = currentItem.publishedAt
     }
 
     override fun getItemCount(): Int {
